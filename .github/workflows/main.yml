@@ -1,0 +1,80 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [main, develop]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    env:
+      DB_DATABASE: ianriizky_attendance
+      DB_USERNAME: root
+      DB_PASSWORD: password
+
+    services:
+      postgres:
+        image: postgres:17.0
+        env:
+          POSTGRES_USER: root
+          POSTGRES_PASSWORD: password
+          POSTGRES_DB: ianriizky_attendance
+        ports:
+          - 5432/tcp
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 3
+
+    strategy:
+      fail-fast: true
+      matrix:
+        php: [8.3]
+        nodejs: [22.11.0]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, fileinfo, mysql
+          coverage: none
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.nodejs }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.nodejs }}
+
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --no-interaction --no-progress
+
+      - name: Build frontend asset
+        run: |
+          npm install
+          npm run build
+
+      - name: Copy environment file
+        run: cp .env.example .env
+
+      - name: Generate app key
+        run: |
+          php artisan key:generate
+
+      - name: Run Migration
+        run: php artisan migrate -v
+        env:
+          DB_PORT: ${{ job.services.postgres.ports[5432] }}
+
+      - name: Execute tests
+        run: php artisan test
+        env:
+          DB_PORT: ${{ job.services.postgres.ports[5432] }}

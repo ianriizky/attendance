@@ -2,7 +2,7 @@
 
 [![License](https://badgen.net/github/license/ianriizky/attendance "License")](LICENSE.md)
 [![Release](https://badgen.net/github/release/ianriizky/attendance "Release")](https://github.com/ianriizky/attendance/releases)
-[![CI/CD](https://github.com/ianriizky/attendance/actions/workflows/main.yml/badge.svg "Continuous Integration")](https://github.com/ianriizky/attendance/actions/workflows/main.yml)
+[![CI/CD](https://github.com/ianriizky/attendance/actions/workflows/main.yml/badge.svg "CI/CD")](https://github.com/ianriizky/attendance/actions/workflows/main.yml)
 
 An employee attendance web application using PHP with Laravel and Filament.
 
