@@ -13,3 +13,4 @@ All notable changes to `Attendance` will be documented in this file.
 - build: add laravel filament library, update composer.json and package.json by [@ianriizky](https://github.com/ianriizky) in [#68dc308](https://github.com/nossadev-JM/nossa-compro/commit/68dc3085a262c2cc30730259c3130a912db842c7).
 - chore: add laravel pint config by [@ianriizky](https://github.com/ianriizky) in [#8948243](https://github.com/nossadev-JM/nossa-compro/commit/89482434fc53cabd9b80c193156c2bdf23c73f68).
 - ci: create github actions by [@ianriizky](https://github.com/ianriizky) in [#6f71a4e](https://github.com/nossadev-JM/nossa-compro/commit/6f71a4e5215d0c457ff2b167a438cbce0253231a).
+- fix: use postgresql as default database by [@ianriizky](https://github.com/ianriizky) in [#fc54caf](https://github.com/nossadev-JM/nossa-compro/commit/fc54cafb862924469f6e8cc6f5952603c9ac6c37).
