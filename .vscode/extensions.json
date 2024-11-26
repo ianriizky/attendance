@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "bmewburn.vscode-intelephense-client",
+        "EditorConfig.EditorConfig",
+        "esbenp.prettier-vscode",
+        "onecentlin.laravel-blade",
+        "open-southeners.laravel-pint",
+        "pcbowers.alpine-intellisense",
+        "Vue.volar",
+        "vunguyentuan.vscode-css-variables",
+        "vunguyentuan.vscode-postcss",
+        "yzhang.markdown-all-in-one"
+    ]
+}
