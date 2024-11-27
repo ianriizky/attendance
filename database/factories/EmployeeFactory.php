@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\EmployeeStatus;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -24,6 +25,7 @@ class EmployeeFactory extends Factory
                 'Sleman',
                 'Gunung Kidul',
             ]),
+            'status' => fake()->randomElement(EmployeeStatus::cases()),
         ];
     }
 }

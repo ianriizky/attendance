@@ -2,14 +2,13 @@
 
 namespace App\Models;
 
-use App\Enums\EmployeeStatus;
+use App\Enums\PresenceType;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Employee extends Model
+class Presence extends Model
 {
     use HasFactory, HasUuids;
 
@@ -19,8 +18,8 @@ class Employee extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'date_of_birth',
-        'city',
+        'time',
+        'type',
     ];
 
     /**
@@ -31,24 +30,16 @@ class Employee extends Model
     protected function casts(): array
     {
         return [
-            'date_of_birth' => 'date',
-            'status' => EmployeeStatus::class,
+            'time' => 'datetime',
+            'type' => PresenceType::class,
         ];
     }
 
     /**
-     * Get the user that owns the employee.
+     * Get the employee that owns the presence.
      */
-    public function user(): BelongsTo
+    public function employee(): BelongsTo
     {
-        return $this->belongsTo(User::class);
-    }
-
-    /**
-     * Get the presences for the employee.
-     */
-    public function presences(): HasMany
-    {
-        return $this->hasMany(Presence::class);
+        return $this->belongsTo(Employee::class);
     }
 }

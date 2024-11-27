@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Enums\UserRole;
 use App\Enums\UserStatus;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -20,6 +21,7 @@ class AdminSeeder extends Seeder
             'email' => 'admin@attendance.com',
             'email_verified_at' => now(),
             'password' => Hash::make('123456'),
+            'role' => UserRole::Admin,
             'status' => UserStatus::Active,
             'remember_token' => Str::random(10),
         ]);

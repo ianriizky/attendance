@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Enums\EmployeeStatus;
+use App\Enums\UserRole;
 use App\Enums\UserStatus;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -23,12 +25,14 @@ class UserEmployeeSeeder extends Seeder
             'email' => 'rendragituloh@gmail.com',
             'email_verified_at' => now(),
             'password' => Hash::make('123456'),
+            'role' => UserRole::Employee,
             'status' => UserStatus::Active,
             'remember_token' => Str::random(10),
             'created_at' => $created_at,
         ])->employee()->create([
             'date_of_birth' => Date::parse(2011, 11, 11),
             'city' => 'Jogja',
+            'status' => EmployeeStatus::Active,
         ]);
 
         User::query()->create([
@@ -36,12 +40,14 @@ class UserEmployeeSeeder extends Seeder
             'email' => 'kharizajaah@gmail.com',
             'email_verified_at' => now(),
             'password' => Hash::make('123456'),
+            'role' => UserRole::Employee,
             'status' => UserStatus::Active,
             'remember_token' => Str::random(10),
             'created_at' => $created_at,
         ])->employee()->create([
             'date_of_birth' => Date::parse(2012, 12, 12),
             'city' => 'Bantul',
+            'status' => EmployeeStatus::Active,
         ]);
 
         User::query()->create([
@@ -49,12 +55,14 @@ class UserEmployeeSeeder extends Seeder
             'email' => 'jokoterdepan@gmail.com',
             'email_verified_at' => now(),
             'password' => Hash::make('123456'),
+            'role' => UserRole::Employee,
             'status' => UserStatus::Active,
             'remember_token' => Str::random(10),
             'created_at' => $created_at,
         ])->employee()->create([
             'date_of_birth' => Date::parse(2010, 10, 10),
             'city' => 'Sleman',
+            'status' => EmployeeStatus::Active,
         ]);
 
         User::query()->create([
@@ -62,12 +70,14 @@ class UserEmployeeSeeder extends Seeder
             'email' => 'maiyamyuk@gmail.com',
             'email_verified_at' => now(),
             'password' => Hash::make('123456'),
+            'role' => UserRole::Employee,
             'status' => UserStatus::Active,
             'remember_token' => Str::random(10),
             'created_at' => $created_at,
         ])->employee()->create([
             'date_of_birth' => Date::parse(2009, 9, 9),
             'city' => 'Gunung Kidul',
+            'status' => EmployeeStatus::Active,
         ]);
     }
 }

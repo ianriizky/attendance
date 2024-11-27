@@ -15,5 +15,11 @@ class DatabaseSeeder extends Seeder
             AdminSeeder::class,
             UserEmployeeSeeder::class,
         ]);
+
+        if (! app()->isProduction()) {
+            $this->call([
+                TestingPresenceSeeder::class,
+            ]);
+        }
     }
 }
