@@ -20,3 +20,4 @@ All notable changes to `Attendance` will be documented in this file.
 - feat: initialize filament admin panel by [@ianriizky](https://github.com/ianriizky) in [#a8b0074](https://github.com/nossadev-JM/nossa-compro/commit/a8b00743282ef9e38d1bef28b7857089681d6f96).
 - chore: change default timezone to Asia/Jakarta by [@ianriizky](https://github.com/ianriizky) in [#ad75aa0](https://github.com/nossadev-JM/nossa-compro/commit/ad75aa0ad2bed45ea5a2eddd1ba520dbfec0196a).
 - feat: finish user, employee, and presence module for admin and employee role by [@ianriizky](https://github.com/ianriizky) in [#fa2f858](https://github.com/nossadev-JM/nossa-compro/commit/fa2f858903dcead3529426f771b0b7a0cf2fd9c8).
+- docs: add table of contents and demo section on readme by [@ianriizky](https://github.com/ianriizky) in [#76005b9](https://github.com/nossadev-JM/nossa-compro/commit/76005b91bc647397876395477724c18d2e1fc9a9).
