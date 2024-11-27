@@ -6,6 +6,21 @@
 
 An employee attendance web application using PHP with Laravel and Filament.
 
+## Table of Contents
+
+- [Nossa Website](#nossa-website)
+  - [Table of Contents](#table-of-contents)
+  - [Tech Stack](#tech-stack)
+  - [Requirement](#requirement)
+  - [Installation](#installation)
+  - [Database Configuration](#database-configuration)
+  - [Development](#development)
+  - [Build Application](#build-application)
+  - [Demo](#demo)
+  - [License](#license)
+  - [Author](#author)
+
+
 ## Tech Stack
 
 - [![Laravel](https://img.shields.io/badge/Laravel_11.33.2-FF2D20?&logo=laravel&labelColor=white "Laravel")](https://laravel.com)
@@ -56,6 +71,22 @@ npm run build
 ```
 
 Then you will see the Vite and Laravel local URL address on the terminal.
+
+## Demo
+
+1. After finishing [installation](#installation) until [build application](#build-application) step, go to https://ianriizky-attendance.test/admin/login to login and access all menu.
+   ![login page](public/img/demo-1.jpeg)
+   Use this credentials for login:
+    - Admin Role
+      - Email: admin@attendance.com
+      - Password: 123456 
+    - Employee Role
+      - Email: rendragituloh@gmail.com
+      - Password: 123456 
+2. To create an presence, go to https://ianriizky-attendance.test/admin/presences/create and fill all needed data.
+   ![create presence page](public/img/demo-2.jpeg)
+3. You can see all your presence data on https://ianriizky-attendance.test/admin/presences.
+   ![list presence page](public/img/demo-3.jpeg)
 
 ## License
 
