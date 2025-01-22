@@ -1,4 +1,4 @@
-# Nossa Website
+# Attendance
 
 [![License](https://badgen.net/github/license/ianriizky/attendance "License")](LICENSE.md)
 [![Release](https://badgen.net/github/release/ianriizky/attendance "Release")](https://github.com/ianriizky/attendance/releases)
@@ -8,7 +8,7 @@ An employee attendance web application using PHP with Laravel and Filament.
 
 ## Table of Contents
 
-- [Nossa Website](#nossa-website)
+- [Attendance](#attendance)
   - [Table of Contents](#table-of-contents)
   - [Tech Stack](#tech-stack)
   - [Requirement](#requirement)
